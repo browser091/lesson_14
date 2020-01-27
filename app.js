@@ -1,5 +1,5 @@
 let str = prompt('Введите слово:');
-while (str === '') {
+while (!str) {
     alert('Вы не ввели слово')
     str = prompt('Пожалуста, введите слово:');
 }
@@ -7,7 +7,7 @@ while (str === '') {
 function myResult(str) {
     return str == str.split('').reverse().join('');
 }
-if (myResult(str) === true) {
+ if (myResult(str)) {
     alert('Это палиндромом');
 } else {
     alert('Слово не является палиндромом');
